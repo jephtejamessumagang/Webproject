@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Multimedia Website</title>
+    <title>Web-1D | IT Profile</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
         *{
@@ -12,114 +15,86 @@
             box-sizing:border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: black;
-            color: white;
-            overflow-x: hidden;
-            text-align: center;
+        body{
+            font-family:'Poppins', sans-serif;
+            background:#0f172a;
+            color:#e2e8f0;
+            padding:40px 10%;
         }
 
-        /* 🌌 Animated Stars Background */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 200%;
-            height: 200%;
-            background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
-            animation: moveStars 60s linear infinite;
-            z-index: -1;
-            opacity: 0.6;
+        h1{
+            font-family:'Orbitron', sans-serif;
+            color:#00f5ff;
+            margin-bottom:20px;
+            text-align:center;
+            text-shadow:0 0 15px rgba(0,255,255,0.5);
         }
 
-        @keyframes moveStars {
-            from { transform: translate(0, 0); }
-            to { transform: translate(-500px, -500px); }
+        h2{
+            font-family:'Orbitron', sans-serif;
+            color:#38bdf8;
+            margin-bottom:15px;
         }
 
-        header {
-            background: rgba(0,0,0,0.7);
-            padding: 25px;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        .card{
+            background:#111827;
+            padding:30px;
+            border-radius:15px;
+            border:1px solid #1f2937;
+            box-shadow:0 0 30px rgba(0,255,255,0.05);
+            margin-bottom:40px;
+            transition:0.3s ease;
         }
 
-        header h1 {
-            font-size: 36px;
-            color: #00f5ff;
-            text-shadow: 0 0 15px #00f5ff;
+        .card:hover{
+            box-shadow:0 0 30px rgba(0,255,255,0.2);
+            transform:translateY(-5px);
         }
 
-        header p {
-            color: #ccc;
+        .info p{
+            margin-bottom:8px;
         }
 
-        section {
-            background: rgba(255,255,255,0.05);
-            margin: 40px auto;
-            padding: 30px;
-            width: 80%;
-            max-width: 800px;
-            border-radius: 15px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 0 30px rgba(0,255,255,0.1);
-            transition: 0.3s ease;
+        .study-load{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
         }
 
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 40px rgba(0,255,255,0.3);
+        .subject{
+            background:#0b1120;
+            padding:15px;
+            border-radius:10px;
+            border:1px solid #1f2937;
+            transition:0.3s ease;
         }
 
-        h2 {
-            margin-bottom: 15px;
-            color: #38bdf8;
+        .subject:hover{
+            border-color:#00f5ff;
+            box-shadow:0 0 15px rgba(0,255,255,0.2);
         }
 
-        img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            margin-top: 15px;
+        .subject h4{
+            color:#00f5ff;
+            margin-bottom:5px;
         }
 
-        a {
-            color: #00f5ff;
-            font-weight: bold;
-            text-decoration: none;
+        .subject span{
+            font-size:14px;
+            color:#94a3b8;
         }
 
-        a:hover {
-            color: white;
-        }
-
-        iframe {
-            width: 100%;
-            max-width: 560px;
-            height: 315px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-
-        video, audio {
-            margin-top: 15px;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(0,0,0,0.7);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #aaa;
+        footer{
+            text-align:center;
+            margin-top:30px;
+            color:#64748b;
+            border-top:1px solid #1f2937;
+            padding-top:15px;
         }
 
         @media(max-width:768px){
-            section{
-                width:90%;
+            .study-load{
+                grid-template-columns:1fr;
             }
         }
     </style>
@@ -127,47 +102,86 @@
 
 <body>
 
-<header>
-    <h1>Welcome to My Space Website</h1>
-    <p>Links • Multimedia • Images</p>
-</header>
+    <h1>IT Student Profile</h1>
 
-<section>
-    <h2>My Favorite Links</h2>
-    <p>Visit <a href="https://www.github.com" target="_blank">GitHub</a></p>
-    <p>Visit <a href="https://www.youtube.com" target="_blank">YouTube</a></p>
-    <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a></p>
-</section>
+    <!-- Personal Info -->
+    <div class="card info">
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> Jephte James T. Sumagang</p>
+        <p><strong>Age:</strong> 23</p>
+        <p><strong>Address:</strong> Purok 6 San Miguel, Cordova, Cebu</p>
+        <p><strong>Gender:</strong> Male</p>
+        <p><strong>Description:</strong> I may not know everything yet, but I am always willing to learn and improve my skills in the field of Information Technology.</p>
+    </div>
 
-<section>
-    <h2>Image Example</h2>
-    <img src="https://picsum.photos/500/300" alt="Sample Image">
-    <p>This is a sample image displayed on the website.</p>
-</section>
+    <!-- Study Load -->
+    <div class="card">
+        <h2>CPC Study Load</h2>
 
-<section>
-    <h2>Anime Video Example</h2>
-    <iframe 
-        src="https://www.youtube.com/embed/t7xHamn5inQ" 
-        title="One Piece Anime Edit" 
-        frameborder="0" 
-        allowfullscreen>
-    </iframe>
-    <p>This is an embedded anime edit video.</p>
-</section>
+        <div class="study-load">
 
-<section>
-    <h2>Song Audio Example</h2>
-    <audio controls>
-        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3" type="audio/mpeg">
-    </audio>
-    <p>This is a sample audio.</p>
-</section>
+            <div class="subject">
+                <h4>PATHFIT 2</h4>
+                <span>Exercise-Based Fitness Activities</span><br>
+                <span>1PM - 3PM | S. Caballero</span>
+            </div>
 
-<footer>
-    <p>© 2026 My Multimedia Website</p>
-</footer>
+            <div class="subject">
+                <h4>WEB</h4>
+                <span>Web Development</span><br>
+                <span>8AM - 9AM | B. Empaces</span>
+            </div>
+
+            <div class="subject">
+                <h4>DISCRETE 1</h4>
+                <span>Discrete Structures</span><br>
+                <span>10AM - 11AM | E. Dinoy</span>
+            </div>
+
+            <div class="subject">
+                <h4>PROG 2</h4>
+                <span>Computer Programming 2</span><br>
+                <span>9AM - 10AM | I. Eda</span>
+            </div>
+
+            <div class="subject">
+                <h4>BASIC ELECT</h4>
+                <span>Basic Electronics</span><br>
+                <span>12PM - 1PM | T. Comayas</span>
+            </div>
+
+            <div class="subject">
+                <h4>GE 3</h4>
+                <span>Readings in Philippine History</span><br>
+                <span>1PM - 4PM | D. Inoc</span>
+            </div>
+
+            <div class="subject">
+                <h4>FIL 2</h4>
+                <span>Panitikan ng Pilipinas</span><br>
+                <span>10AM - 1PM | M. Taneo</span>
+            </div>
+
+            <div class="subject">
+                <h4>GE 4</h4>
+                <span>Purposive Communication</span><br>
+                <span>3PM - 4:30PM | C. Blasco</span>
+            </div>
+
+            <div class="subject">
+                <h4>NSTP 2</h4>
+                <span>National Service Training Program 2</span><br>
+                <span>4:30PM - 6PM | L. Paquibot</span>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        © 2026 IT Student Profile | Web-1D
+    </footer>
 
 </body>
 </html>
+
 
